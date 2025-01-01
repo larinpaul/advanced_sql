@@ -10,7 +10,7 @@
 -- aggregate functions, complex table joins, and common table expressions
 
 -- In this tutorial, we'll cover the following concepts
--- and lok at examples that will prepare you
+-- and look at examples that will prepare you
 -- for writing advanced SQL queries for data analytics:
 -- 1. Creating data for advanced SQL example
 -- 2. Creating tables using normalization concepts
@@ -20,6 +20,7 @@
 -- 6. Counting records
 -- 7. Aggregating averages in advanced SQL
 -- 8. Summary
+
 
 
 
