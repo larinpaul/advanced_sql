@@ -65,4 +65,35 @@
 -- the middle value is the 3rd value). 
 -- In this example, the median is 6.
 
+-- By learning advanced SQL concepts, you'll be able to transform data
+-- into summary statistics which is an effective way to begin understanding
+-- how your data can help you make decisions.
+-- Here are some of the commonly used aggregate functions
+-- for data analysis:
+-- * COUNT()
+-- * AVG()
+-- * MIN()
+-- * MAX()
+-- * MAX()
+-- * SUM()
+-- * StDEV()
+-- * VAR()
 
+-- There are two ways to use COUNT():
+-- * COUNT(*) return a count of rows that includes null values.
+-- * COUNT(column_name) returns a count of records excluding the null values.
+
+-- If we want to count how many records are in the CLIENT table,
+-- we use a query like this:
+SELECT COUNT(*) AS records FROM client
+
+-- As expected, a count of four returns since we have four records in the client table.
+
+-- If we want to count hwo many records have a value in the gender field,
+-- we use a query like this:
+
+SELECT COUNT(gender) as genderCount FROM client
+
+-- Notice we onyl count 3 records with a value in the gender field
+-- because Alex Porter's gneder is NULL.
+-- A Null means the field is empty; it contains no value.
