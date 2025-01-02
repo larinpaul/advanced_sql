@@ -21,9 +21,23 @@
 -- 7. Aggregating averages in advanced SQL
 -- 8. Summary
 
+-- 8. Summary
 
+/*
+While retrieving data using SQLcan be simple, cleaning
+and aggregating the data requires skills
+that need to be practiced in order to master.
+In this tutorial we learned several concepts
+that will bring you to an advanced SQL skill level
+including table joins, aliasing variables,
+counting records and applying aggregate functions and grouping.
 
+These concepts are important to know because companies
+often keep data in different systesm or database tables,
+leaving it up to data nalysts to join them together
+and make sense of it all.
 
-
-
-
+If you're interested in learning more about SQL and data analytics,
+you can try their free, self-paced data analytics cours:
+-- https://careerfoundry.com/en/short-courses/become-a-data-analyst/?popup-tracking=WYSDN-short-course-DAT
+*/
