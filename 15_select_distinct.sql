@@ -9,3 +9,6 @@ SELECT DISTINCT Country FROM Customers;
 -- Syntax
 SELECT DISTINCT column1, column2, ...
 FROM table_name;
+
+-- Count distinct
+SELECT COUNT(DISTINCT Country) FROM Customers;
