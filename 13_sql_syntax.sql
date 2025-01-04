@@ -14,5 +14,3 @@ ALTER TABLE -- modifies a table
 DROP TABLE -- deletes a key
 CREATE TABLE -- creates an index (search key)
 DROP INDEX  -- deletes an index
-
-
