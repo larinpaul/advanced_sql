@@ -12,3 +12,10 @@ FROM table_name;
 
 -- Count distinct
 SELECT COUNT(DISTINCT Country) FROM Customers;
+
+-- Some RDBMS don't support SELECT COUNT(DISTINCT Country)
+-- for example MS Access
+-- so you have to use something like this
+
+SELECT Count(*) AS DistinctCountries
+FROM (SELECT DISTINCT Country FROM Customers);
