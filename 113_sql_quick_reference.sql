@@ -21,3 +21,16 @@ WHERE  condition1
 OR condition2;
 
 
+-- ALTER TABLE
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+-- or
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+
+
+
