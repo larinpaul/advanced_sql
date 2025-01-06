@@ -32,5 +32,54 @@ ALTER TABLE table_name
 DROP COLUMN column_name;
 
 
+-- AS (alias)
+
+SELECT column_name AS column_alias
+FROM table_name;
+
+-- or
+
+SELECT column_name
+FROM table_name AS table_alias;
+
+
+-- BETWEEN
+
+SELECT column_name(s)
+FROM table_name
+WHERE column_name
+BETWEEN value1 AND value2;
+
+-- sql
+SELECT *
+FROM employees
+WHERE salary BETWEEN 50000 AND 100000;
+
+
+-- CREATE DATABASE
+CREATE DATABASE database_name;
+
+
+-- CREATE TABLE
+CREATE TABLE table_name
+(
+column_name1 data_type,
+column_name2 data_type,
+column_name3 data_type;
+...
+)
+
+-- CREATE INDEX
+CREATE INDEX index_name -- allows duplicate values
+ON table_name (column_name)
+
+-- or
+
+CREATE UNIQUE INDEX index_name -- doesn't allow duplicate values
+ON table_name (column_name)
+
+
+
+
 
 
