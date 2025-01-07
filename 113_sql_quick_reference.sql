@@ -98,6 +98,39 @@ DELETE * FROM table_name
 -- (Note: Deletes the entire table!!)
 
 
+-- DROP DATABASE
+DROP DATABASE database_name
+
+
+-- DROP INDEX
+DROP INDEX table_name.index_name -- SQL Server
+DROP INDEX index_name ON table_name -- MS Access
+DROP INDEX index_name -- DB2/Oracle
+ALTER TABLE table_name
+DROP INDEX index_name -- MySQL
+
+
+-- DROP TABLE
+DROP TABLE table_name
+
+
+-- EXISTS
+IF EXISTS (SELECT * FROM table_name WHERE id = ?)
+BEGIN
+--do what needs to be done if exists
+END
+ELSE
+BEGIN
+--do what needs to be done if not
+END
+
+
+-- GROUP BY
+SELECT column_name,
+aggregate_function(column_name)
+FROM table_name
+WHERE column_name operator value
+GROUP BY column_name
 
 
 
