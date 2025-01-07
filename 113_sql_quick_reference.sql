@@ -79,6 +79,24 @@ CREATE UNIQUE INDEX index_name -- doesn't allow duplicate values
 ON table_name (column_name)
 
 
+-- CREATE VIEW
+CREATE VIEW view_name AS
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+
+
+-- DELETE
+DELETE FROM table_name
+WHERE some_column=some_value
+
+-- or
+DELETE FROM table_name
+-- (Note: Deletes the entire table!!)
+
+DELETE * FROM table_name
+-- (Note: Deletes the entire table!!)
+
 
 
 
