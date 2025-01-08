@@ -211,3 +211,9 @@ INTO new_table_name [IN externaldatabase]
 FROM old_table_name
 
 
+-- SELECT TOP
+SELECT TOP number|percent column_name(s)
+FROM table_name
+
+
+
