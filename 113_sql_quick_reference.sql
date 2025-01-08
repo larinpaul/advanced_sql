@@ -184,6 +184,11 @@ FROM table_name
 WHERE column_name LIKE pattern
 
 
+-- ORDER BY
+SELECT column_names(s)
+FROM table_name
+ORDER BY column_name [ASC|DESC]
+
 
 
 
