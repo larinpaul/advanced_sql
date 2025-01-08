@@ -220,4 +220,17 @@ FROM table_name
 TRUNCATE TABLE table_name
 
 
+-- UNION
+SELECT column_name(s) FROM table_name1
+UNION
+SELECT column_name(s) FROM table_name2
+
+-- UNION ALL
+SELECT column_name(s) FROM table_name1
+UNION ALL
+SELECT column_name(s) FROM table_name2
+
+
+
+
 
