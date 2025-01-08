@@ -159,4 +159,25 @@ INSERT INTO table_name
 VALUES (value1, value2, value3,....)
 
 
+-- INNER JOIN
+SELECT column_name(s)
+FROM table_name1
+INNER JOIN table_name2
+ON table_name1.column_name=table_name2.column_name
+
+-- RIGHT JOIN
+SELECT column_name(s)
+FROM table_name1
+RIGHT JOIN table_name2
+ON table_name1.column_name=table_name2.column_name
+
+-- FULL JOIN
+SELECT column_name(s)
+FROM table_name1
+FULL JOIN table_name2
+ON table_name1.column_name=table_name2.column_name
+
+
+
+
 
