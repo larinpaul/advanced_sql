@@ -216,4 +216,8 @@ SELECT TOP number|percent column_name(s)
 FROM table_name
 
 
+-- TRUNCATE TABLE
+TRUNCATE TABLE table_name
+
+
 
