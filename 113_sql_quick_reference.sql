@@ -178,6 +178,12 @@ FULL JOIN table_name2
 ON table_name1.column_name=table_name2.column_name
 
 
+-- LIKE
+SELECT column_name(s)
+FROM table_name
+WHERE column_name LIKE pattern
+
+
 
 
 
