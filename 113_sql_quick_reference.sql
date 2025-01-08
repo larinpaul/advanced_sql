@@ -199,3 +199,15 @@ SELECT DISTINCT column_name(s)
 FROM table_name
 
 
+-- SELECT INTO
+SELECT *
+INTO new_table_name [IN externaldatabase]
+FROM old_table_name
+
+-- or
+
+SELECT column_name(s)
+INTO new_table_name [IN externaldatabase]
+FROM old_table_name
+
+
