@@ -190,5 +190,12 @@ FROM table_name
 ORDER BY column_name [ASC|DESC]
 
 
+-- SELECT
+SELECT column_name(s)
+FROM table_name
+ 
+-- SELECT DISTINCT
+SELECT DISTINCT column_name(s)
+FROM table_name
 
 
