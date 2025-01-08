@@ -148,4 +148,15 @@ WHERE column_name
 IN (value1,value2,...)
 
 
+-- INSERT INTO
+INSERT INTO table_name
+VALUES (value1, value2, value3,....)
+
+-- or
+
+INSERT INTO table_name
+(column1, column2, column3,...)
+VALUES (value1, value2, value3,....)
+
+
 
