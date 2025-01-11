@@ -1,0 +1,7 @@
+-- 2024 01 11
+
+-- SQL CREATE DATABASE Statement
+
+CREATE DATABASE databasename;
+
+CREATE DATABASE testDB;
