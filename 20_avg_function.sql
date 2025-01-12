@@ -93,3 +93,59 @@ GROUP BY CategoryID;
 
 -- You will learn more about the GROUP BY clause later in this tutorial.
 -- https://www.w3schools.com/sql/sql_groupby.asp
+
+
+-- Using GROUP BY with multiple columns.
+-- When you use `GROUP BY` with multiple columns,
+-- the query groups the results based on the unique combinations of values in those columns.
+
+-- Suppose you have a `Products` table with the following columns:
+-- ProductID
+-- ProductName
+-- CategoryID
+-- SupplierID
+-- Price
+
+-- Let's assume the Products table has the following data:
+ProductID	ProductName	CategoryID	SupplierID	Price
+1	Product A	1	101	10.00
+2	Product B	1	101	15.00
+3	Product C	1	102	20.00
+4	Product D	2	101	25.00
+5	Product E	2	102	30.00
+6	Product F	2	102	35.00
+
+-- You want to calculate the average price AVG(Price) for each combination of CategoryID and SupplierID
+SELECT
+    AVG(Price) AS AveragePrice,
+    CategoryID,
+    SupplierID
+FROM Products
+GROUP BY CategoryID, SupplierID;
+
+-- The query would group the data by CategoryID and SupplierID and calculate the average price for each group.
+-- The result would look like this:
+AveragePrice	CategoryID	SupplierID
+12.50	1	101
+20.00	1	102
+25.00	2	101
+32.50	2	102
+
+-- Key Points: 
+-- The GROUP BY clause creates groups based on the unique combinations of CategoryID and SupplierID
+-- The AVG(Price) is calculated for each group
+-- The result shows the average price for each combination of CategoryID and SupplierID
+
+-- If you want to group by more columns 
+-- (e.g., CategoryID, SupplierID, and another column like Region),
+-- you can simply add the column to the GROUP BY clause and the SELECT list
+SELECT
+    AVG(Price) AS AveragePrice,
+    CategoryID,
+    SupplierID,
+    Region
+FROM Products
+GROUP BY CategoryID, SuppleirID, Region;
+
+
+
