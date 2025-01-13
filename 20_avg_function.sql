@@ -148,4 +148,86 @@ FROM Products
 GROUP BY CategoryID, SuppleirID, Region;
 
 
+-- If you add a WHERE clause to a query with GROUP BY,
+-- the filtering happens BEFORE the grouping.
+-- The WHERE clause filters the rows from the table,
+-- and then the remaining rows are grouped and aggregated.
+-- Let's extends the previous example to include a WHERE clause and see how it works. 
 
+-- Suppose you want to calculate the average price AVG(Price) 
+-- for each combination of CategoryID and SupplierID,
+-- but only for rpdeocuts with a price greater than 15.00
+SELECT
+    AVG(Price) AS AveragePrice,
+    CategoryID,
+    SupplierID
+FROM Products
+WHERE Price > 15.00
+GROUP BY CategoryID, SupplierID;
+
+-- WHAT HAPPENS STEP-BY-STEP
+-- 1. Filtering with WHERE. Only rows with Price > 15.00 are considered for grouping and aggregation
+-- 2. Grouping with GROUP BY. The remaining rows are grouped by CategoryID and SupplierID
+-- 3. Aggregation with AVG(Price). The average price is calculated for each group
+
+-- Filtered data (WHERE Price > 15.00)
+ProductID	ProductName	CategoryID	SupplierID	Price
+3	Product C	1	102	20.00
+4	Product D	2	101	25.00
+5	Product E	2	102	30.00
+6	Product F	2	102	35.00
+
+-- Grouped and Aggregated Result:
+AveragePrice	CategoryID	SupplierID
+20.00	1	102
+25.00	2	101
+32.50	2	102
+
+-- Key Points:
+-- The WHERE clause is applied BEFORE grouping and aggregation
+-- Only rows that satisfy the WHERE condition are included in the groups
+-- If a group has no rows after the WHERE clause, it will not appear in the result.
+
+-- What if you want to filter after grouping?
+-- If you want to filter the results after grouping
+-- (e.g., only show groups where the average price is greater than a certain value),
+-- you would use the HAVING clause instead of WHERE. For example:
+SELECT 
+    AVG(Price) AS AveragePrice,
+    CategoryID,
+    SupplierID
+FROM Products
+GROUP BY CategoryID, SupplierID
+HAVING AVG(Price) > 20.00;
+-- This would exclude groups where the average price is 20.00 or less.
+
+-- Many HAVING use cases can also be achieved with WHERE in certain scenarions.
+-- However, the key difference lies in when the filtering happens and what you're filtering.
+SELECT
+    SupplierID,
+    COUNT(*) AS ProductCount
+FROM Products
+GROUP BY SupplierID
+HAVING COUNT(*) > 10;
+-- What's Happening:
+-- The query groups rows by SupplierID and counts the number of products for each supplier.
+-- The HAVING clause filters out groups where the count of products is 10 or less.
+-- Why WHERE Can't Replace HAVING Here:
+-- The COUNT(*) function is an aggregate function, and its result is only available AFTER grouping.
+-- The WHERE clause operates before grouping, so it doesn't have access to the result of COUNT(*).
+
+-- Why Other Examples Can Be Done with WHERE (Sometimes)...
+-- Example 1: Find Categories with High Average Prices HERE IT CANNOT:
+SELECT
+    CategoryID,
+    AVG(Price) AS AveragePrice
+FROM Products
+GROUP BY CategoryID
+HAVING AVG(Price) > 50; -- Cannot because we first have to calculate average price
+-- Example 4: Filter Rows Before Grouping
+SELECT
+    CategoryID,
+    AVG(Price) AS AveragePrice
+FROM Products
+WHERE Price > 50
+GROUP BY CategoryID;
