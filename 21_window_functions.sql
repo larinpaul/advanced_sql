@@ -38,5 +38,51 @@ SELECT
     ROW_NUMBER() OVER (ORDER BY Price DESC) AS RowNum
 FROM Products;
 
+-- 2. RANK()
+-- * Assigns a rank to each row within a partition, with gaps in the ranking values if there are ties.
+SELECT
+ProductID,
+ProductName,
+Price,
+RANK() OVER (ORDER BY Price DESC) AS Rank
+FROM Products;
 
+-- 3. DENSE_RANK():
+-- * Similar to RANK(), but without gaps in the ranking values.
+SELECT
+ProductID,
+ProductName,
+Price,
+DENSE_RANK() OVER (ORDER BY Price DESC) AS DenseRank
+FROM Products;
+
+-- 4. NTILE(n):
+-- * Divides the rows into n buckets and assigns a bucket number to each row.
+SELECT
+ProductID,
+ProductName,
+Price,
+NTILE(4) OVER (ORDER BY Price DESC) AS Quartile
+FROM Products;
+
+-- 5. SUM(), AVG(), MIN(), MAX():
+-- These aggregate functions can be used as window functions
+-- to calculate running totals, moving averages, etc.
+SELECT
+    ProductID,
+    ProductName,
+    Price,
+    SUM(Price) OVER (ORDER BY ProductID) AS RunningTotal
+FROM Products;
+
+-- 6. LAG() and LEAD():
+-- * LAG() accesses data from a previous row in the same result set.
+-- * LEAD() accesses data from a subsequent row.
+SELECT
+    ProductID,
+    ProductName,
+    Price,
+    LAG(Price, 1) OVER (ORDER BY ProductID) AS PreviousPrice,
+    LEAD(Price, 1) OVER (ORDER BY ProductID) AS NextPrice
+FROM Products;
 
