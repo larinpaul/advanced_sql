@@ -41,3 +41,52 @@ OrderID	CustomerName	OrderDate
 -- * LEFT (OUTER) JOIN: Returns all records from the left table,and the matched records from the right table
 --* RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
 -- * FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+
+-- SQL Query with Join on Multiple Columns
+-- You want to join the tables on both OrderID and ProductID to get detailed information about each order.
+
+-- Orders table:
+OrderID	CustomerID	ProductID	OrderDate
+1	101	201	2023-01-01
+2	102	202	2023-01-02
+3	101	203	2023-01-03
+
+-- OrderDetails table:
+OrderID	ProductID	Quantity	Price
+1	201	2	50
+2	202	1	100
+3	203	3	75
+
+SELECT
+    O.OrderID,
+    O.CustomerID,
+    O.ProductID,
+    O.OrderDate,
+    OD.Quantity,
+    OD.Price
+FROM
+    Orders O
+JOIN
+    OrderDetails OD
+ON
+    O.OrderID = OD.OrderID
+    AND O.ProductID = OD.ProductID;
+
+-- Result
+-- The query will returns rows where both OrderID and ProductID match between the two tables:
+OrderID	CustomerID	ProductID	OrderDate	Quantity	Price
+1	101	201	2023-01-01	2	50
+2	102	202	2023-01-02	1	100
+3	101	203	2023-01-03	3	75
+
+-- The ON clause specifies two conditions:
+-- Only rows that satisfy BOTH conditions are included in the result.
+
+-- Notes
+-- * Youcan join on as many columns as needed by adding more conditions with AND or OR
+-- * If you use OR, the join will include rows that satisfy EITHER condition
+-- * Be cautious when joining on multiple columns,as it can lead to fewer matches if the conditions are too strict.
+
+-- This approach is commonly used when tables have composite keys 
+-- or when you need to join on multiple attributes to uniquely identify rows.
