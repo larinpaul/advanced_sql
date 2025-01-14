@@ -152,9 +152,9 @@ FROM Products;
 
 -- Performance Considerations:
 -- * Indexing: Ensure that the columns used in the ORDER BY and PARTITION BY clauses are indexed for better performance.
--- * Frame Specification: Bemindful of the frame specification (`ROWS` vs `RANGE`) as it can impact performance, especially with large datasets.
--- ROWS defines the widnow frame based on PHYSICAL ROWS relative to the current row. It works with a fixed number of rows before or after the current row.
+-- * Frame Specification: Be mindful of the frame specification (`ROWS` vs `RANGE`) as it can impact performance, especially with large datasets.
+-- ROWS defines the window frame based on PHYSICAL ROWS relative to the current row. It works with a fixed number of rows before or after the current row.
 -- ROWS BETWEEN <start> AND <end>
--- RANGE defines the winow function frame based on LOGICAL RANGES OF VALUES relative to the current row. It groups rows with the same value in the ORDER BY columnand treats them as a single unit.
+-- RANGE defines the window function frame based on LOGICAL RANGES OF VALUES relative to the current row. It groups rows with the same value in the ORDER BY column and treats them as a single unit.
 -- RANGE BETWEEN <start> AND <end>
 -- * Partitioning: Proper partitioning can reduce the amoung of data processed by the window function.
