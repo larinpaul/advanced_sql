@@ -86,3 +86,75 @@ SELECT
     LEAD(Price, 1) OVER (ORDER BY ProductID) AS NextPrice
 FROM Products;
 
+
+-- Examples
+
+-- 1. Running Total:
+SELECT
+ProductID,
+ProductName,
+Price,
+SUM(Price) OVER (ORDER BY ProductID) AS RunningTotal
+FROM Products;
+
+-- 2. Moving Average:
+SELECT
+    ProductID,
+    ProductName,
+    Price,
+    AVG(Price) OVER (ORDER BY ProductID ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS MovingAvg
+FROM Products;
+
+-- 3. Ranking Products by Price:
+SELECT
+ProductID,
+ProductName,
+Price,
+RANK() OVER (ORDER BY Price DESC) AS PriceRank
+FROM Products;
+
+-- 4. Partitioned Ranking:
+SELECT
+ProductID,
+ProductName,
+CategoryID,
+Price,
+RANK() OVER (PARTITION BY CategoryID ORDER BY Price DESC) AS CategoryPriceRank
+FROM Products;
+
+
+-- Advanced Use Cases
+
+-- 1. Cumulative Distribution:
+SELECT
+    ProductID,
+    ProductName,
+    Price,
+    CUME_DIST() OVER (ORDER BY Price) AS CumulativeDistribution
+FROM Products;
+
+-- 2. Percentile Rank:
+SELECT
+    ProductID,
+    ProductName,
+    Price,
+    PERCENT_RANK() OVER (ORDER BY Price) AS PercentileRank
+FROM Products;
+
+-- 3. First and Last Value in a Window:
+SELECT
+    ProductID,
+    ProductName,
+    Price,
+    FIRST_VALUE(Price) OVER (ORDER BY ProductID) AS FirstPrice,
+    LAST_VALUE(Price) OVER (ORDER BY ProductID ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS LastPrice
+FROM Products;
+
+-- Performance Considerations:
+-- * Indexing: Ensure that the columns used in the ORDER BY and PARTITION BY clauses are indexed for better performance.
+-- * Frame Specification: Bemindful of the frame specification (`ROWS` vs `RANGE`) as it can impact performance, especially with large datasets.
+-- ROWS defines the widnow frame based on PHYSICAL ROWS relative to the current row. It works with a fixed number of rows before or after the current row.
+-- ROWS BETWEEN <start> AND <end>
+-- RANGE defines the winow function frame based on LOGICAL RANGES OF VALUES relative to the current row. It groups rows with the same value in the ORDER BY columnand treats them as a single unit.
+-- RANGE BETWEEN <start> AND <end>
+-- * Partitioning: Proper partitioning can reduce the amoung of data processed by the window function.
