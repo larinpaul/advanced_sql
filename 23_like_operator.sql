@@ -66,3 +66,52 @@ WHERE CustomerName LIKE 'La%';
 SELECT * FROM Customers
 WHERE CustomerName LIKE 'a%' OR CustomerName LIKE 'b%';
 
+
+-- Ends With
+
+-- To returns records that end with a specific letter or phrase,
+-- add the % at the beginning of the letter or phrase.
+
+-- Return all customers that end with 'a':
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%a';
+
+-- Tip: You can also combine "starts with" and "end with";
+
+-- Return all customers that start with "b" and end with "s":
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'b%s';
+
+
+-- Contains 
+
+-- To return all records that contain a specific letter or phrase,
+-- annd the % both before and after the letter or phrase.
+
+-- Return all customers taht contain the phrase 'or'
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%or%';
+
+
+-- Combine Wildcards
+
+-- Any wildcard, like % and _, can be used in combination with other wildcards.
+
+
+-- Return all customers that start with "a" and are at least 3 characters in length:
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a__%';
+
+-- Return all customers that have "r" in the second position:
+SELECT * FROM Customers
+WHERE CustomerName LIKE '_r%';
+
+
+-- Without Wildcard
+
+-- If no wildcard is specified, the phrase has to have an exact match to return a result.
+
+-- Return allcustomers from Spain
+SELECT * FROM Customers
+WHERE Country LIKE 'Spain';
