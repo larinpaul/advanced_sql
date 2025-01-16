@@ -59,13 +59,32 @@ SELECT * FROM Customers
 WHERE CustomerName LIKE '[bsp]%';
 
 -- Using the - Wildcard
-
+-- The - wildcard allows you to specify a range of characters inside the [] wildcard.
+-- Example
+-- Return all characters starting with "a", "b", "c", "d", "e" or "f":
+SELECT * FROM Customers
+WHERE CustomerName LIKE '[a-f]%';
 
 -- Combine Wildcards
+-- Any wildcard, like % and _, can be used in combination with other wildcards.
 
+-- Return all cusomers that start with "a" and are at least 3 characters in length:
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a__%';
+
+-- Return all customers that have "r" in the second position:
+SELECT * FROM Customers
+WHERE CustomerName LIKE '_r%';
 
 -- Without Wildcard
 
+-- If no wildcard is specified, the phrase has to have an exact match to return a result.
+
+SELECT * FROM Customers
+WHERE Country LIKE 'Spain'
 
 -- Microsoft Access Wildcards
 
+-- The Microsoft Access Database has some other wildcards:
+
+-- Symbol -- Description -- Example
