@@ -78,6 +78,24 @@ FETCH FIRST 50 PERCENT ROWS ONLY;
 
 -- ADD a WHERE CLAUSE
 
+-- The following SQL statement selects the first three records from the "Customers" table,
+-- where the country is "Germany" (for SQL Server/MS Access):
+-- Example
+SELECT TOP 3 * FROM Customers
+WHERE Country='Germany';
+
+-- The following SQL statement showst he equivalent example for MySQL:
+-- Example
+SELECT * FROM Customers
+WHERE Country='Germany'
+LIMIT 3;
+
+-- The followign SQL statement shows the equivalent example for Oracle:
+-- Example
+SELECT * FROM Customers
+WHERE Country='Germany'
+FETCH FIRST 3 ROWS ONLY;
+
 
 -- ADD the ORDER BY Keyword
 
