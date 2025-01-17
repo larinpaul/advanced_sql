@@ -99,10 +99,21 @@ FETCH FIRST 3 ROWS ONLY;
 
 -- ADD the ORDER BY Keyword
 
+-- Add the ORDER BY keyword when you want to sort the result,
+-- and return the first 3 records of the sorted result.
 
+-- For SQL Server and MS Access:
+-- Example
+-- Sort the result reverse aphabetically by CustomerName, and return the first 3 records:
+SELECT TOP 3 * FROM Customers
+ORDER BY CustomerName DESC;
 
+-- The following SQL statement shows the equivalent example for MySQL:
+SELECT * FROM Customers
+ORDER BY CustomerName DESC
+LIMIT 3;
 
-
-
-
-
+-- The following SQL statement shows the equivalent example for Oracle:
+SELECT * FROM Customers
+ORDER BY CustomerName DESC
+FETCH FIRST 3 ROWS ONLY;
