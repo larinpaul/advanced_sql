@@ -60,7 +60,9 @@ SELECT * FROM Customers
 LIMIT 3;
 
 -- FETCH FIRST
-
+-- The following SQL statement shows the equivalent for Oracle:
+SELECT * FROM Customers
+FETCH FIRST 3 ROWS ONLY;
 
 -- SQL TOP PERCENT Example
 
