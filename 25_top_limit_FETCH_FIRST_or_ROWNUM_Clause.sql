@@ -65,6 +65,15 @@ SELECT * FROM Customers
 FETCH FIRST 3 ROWS ONLY;
 
 -- SQL TOP PERCENT Example
+-- The following SQL statement selects the first 50% of the records 
+-- from the "Customers" table (for SQL Server/MS Access):
+-- Example
+SELECT TOP 50 PERCENT * FROM Customers;
+
+-- The following SQL statement shows the equivalent example for Oracle:
+-- Example
+SELECT * FROM Customers
+FETCH FIRST 50 PERCENT ROWS ONLY;
 
 
 -- ADD a WHERE CLAUSE
