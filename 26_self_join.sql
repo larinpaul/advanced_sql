@@ -37,3 +37,37 @@ FROM Customers A, Customers B
 WHERE A.CustomerID <> B.CustomerID
 AND A.City = B.City
 ORDER BY A.City;
+
+
+-- A self join is a type of join in SQL that allows you to join a table to itself.
+-- This can be useful in various scenarios,
+-- particularly when you want to compare rows within the same table
+-- or when you want to retrieve hierarchical data.
+-- Here are some common use cases for self joins:
+-- 1. Hierarchical data (e.g., employees and their managers)
+-- 2. Comparing rows (for example, if you want to find pairs of products that have the same price)
+-- 3. Finding duplicates (by comparing rows to each other)
+-- 4. Aggregating data (based on certain conditions, e.g. if you want to find the total sales for each salesperson and compare it to the sales of other salespeople)
+-- 5. Data transformation (sometimes, you may need to transform data based on relationships within the same table, and self joins can facilitate that)
+
+-- Example
+
+-- Consider a table Employees with the following structure:
+EmployeeID	Name	ManagerID
+1	Alice	NULL
+2	Bob	1
+3	Charlie	1
+4	David	2
+
+-- To find the names of employees along with their managers,
+-- you could use a self join like this:
+SELECT e1.Name AS Employee, e2.Name AS Manager
+FROM Employees e1
+LEFT JOIN Employees e2 ON e1.ManagerID = e2.EmployeeID;
+
+-- This query would return:
+
+Employee	Manager
+Bob	Alice
+Charlie	Alice
+David	Bob
