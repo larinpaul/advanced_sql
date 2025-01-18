@@ -71,3 +71,42 @@ Employee	Manager
 Bob	Alice
 Charlie	Alice
 David	Bob
+
+
+-- Now let's create a more detailed example of a hierarchical structure using a self join
+
+-- Employees table structure
+
+EmployeeID	Name	ManagerID
+1	Alice	NULL
+2	Bob	1
+3	Charlie	1
+4	David	2
+5	Eva	2
+6	Frank	3
+
+-- Goal
+-- We want to retrieve a list of employees along with their managers' names to visualize the hierarchy.
+
+SELECT
+    e1.Name AS Employee,
+    e2.Name AS Manager
+FROM
+    Employees e1
+LEFT JOIN
+    Employees e2 ON e1.ManagerID = e2.EmployeeID;
+
+-- The result of the query:
+EMPLOYEE MANAGER
+Alice NULL
+Bob Alice
+Charlie Alice
+David Bob
+Eva Bob
+Frank Charlie
+
+-- From this result, you can see the hierarchy:
+* Alice is at the top (CEO).
+    * Bob and Charlie report to Alice.
+        * David and Eva report to Bob.
+        * Frank reports to Charlie.
