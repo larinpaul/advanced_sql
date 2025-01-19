@@ -37,6 +37,18 @@ FROM Products;
 SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0))
 FROM Products;
 
+-- The COALESCE() function takes multiple arguments and returns the first non-NULL value in the list.
+-- If all arguments are null, it returns NULL.
+-- It is more flexible than IFNULL() because it can handle multiple potential NULL values
+-- and provide a fallback for each.
+SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0)) AS TotalValue
+FROM Products;
+-- In this example, if UnitsOnOrder is NULL, it will be replaced by 0.
+
+-- Example with Multiple Arguments
+SELECT COALESCE(column1, column2, column3, 'default_value') AS FirstNonNullValue
+FROM YourTable;
+
 
 -- SQL Server
 
