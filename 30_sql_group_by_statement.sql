@@ -44,9 +44,32 @@ FROM Customers
 GROUP BY Country;
 
 
+-- The following SQL statement lists the number of customers in each cuntry, sorted high to low:
+-- Example
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+ORDER BY COUNT(CustomerID) DESC;
 
 
+-- Demo Database
+OrderID	CustomerID	EmployeeID	OrderDate	ShipperID
+10248	90	5	1996-07-04	3
+10249	81	6	1996-07-05	1
+10250	34	4	1996-07-08	2
+
+-- And a selection from the "Shippers" table:
+
+ShipperID	ShipperName
+1	Speedy Express
+2	United Package
+3	Federal Shipping
 
 
+-- GROUP BY With JOIN Example
 
+-- The following SQL statement lists the number of orders sent by each shipper:
 
+SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
+LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+GROUP BY ShipperName;
