@@ -29,3 +29,17 @@ CustomerID	CustomerName	ContactName	Address	City	PostalCode	Country
 5	Berglunds snabbköp	Christina Berglund	Berguvsvägen 8	Luleå	S-958 22	Sweden
 
 
+-- SQL HAVING Examples
+
+-- The following SQL statement lists the number of customers in each country.
+-- Only include countries with more than 5 customers:
+-- Example
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5;
+
+
+
+
+
