@@ -50,6 +50,40 @@ HAVING COUNT(CustomerID) > 5
 ORDER BY COUNT(CustomerID) DESC;
 
 
+-- Demo Database
+
+-- Below is a selection from the "Orders" table in the Northwind sample database:
 
 
+OrderID	CustomerID	EmployeeID	OrderDate	ShipperID
+10248	90	5	1996-07-04	3
+10249	81	6	1996-07-05	1
+10250	34	4	1996-07-08	2
 
+-- And a selection from the "Employees" table:
+
+EmployeeID	LastName	FirstName	BirthDate	Photo	Notes
+1	Davolio	Nancy	1968-12-08	EmpID1.pic	Education includes a BA....
+2	Fuller	Andrew	1952-02-19	EmpID2.pic	Andrew received his BTS....
+3	Leverling	Janet	1963-08-30	EmpID3.pic	Janet has a BS degree....
+
+
+-- More HAVING Examples
+
+-- The following SQL statement lists the employees that have registered more than 10 orders:
+-- Example
+SELECT Employees.LastName, COUNT(Orders.OrderID) AS NumberOfOrders
+FROM (ORDERS
+INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID)
+GROUP BY LastName
+HAVING COUNT(Orders.OrderID) > 10;
+
+-- The following SQL statement lists if the employees
+-- "Davolio" or "Fuller" have registered more than 25 orders:
+-- Example
+SELECT Employees.LastName, COUNT(Orders.OrderID) AS NumberOfOrders
+FROM Orders
+INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+WHERE LastName = 'Davolio' OR LastName = 'Fuller'
+GROUP BY LastName
+HAVING COUNT(Orders.OrderID) > 25;
