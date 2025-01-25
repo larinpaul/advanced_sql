@@ -41,3 +41,29 @@ RETURN
 );
 GO
 
+
+-- 1. Scalar Functions
+USE HASURA;
+GO
+
+CREATE FUNCTION dbo.getDeptId (@EmpId int)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @DeptId int;
+    SELECT @DeptId = e.DeptId
+    FROM dbo.EMPLOYEE e
+    WHERE e.EmpID=@EmpId;
+    RETURN @DeptId;
+END;
+GO
+
+-- Invoke the functions as:
+SELECT dbo.getDeptId(3);
+
+SELECT e.empName, dbo.getDeptId(e.EmpId) AS
+DepartmentID FROM EMPLOYEE e;
+
+
+
+
