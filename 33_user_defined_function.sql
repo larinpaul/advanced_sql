@@ -82,3 +82,4 @@ SELECT * FROM dbo.getEmpDetails(4);
 
 -- EmpName -- EmpId -- DeptName
 -- Musk -- 4 -- R&D
+
