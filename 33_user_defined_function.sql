@@ -65,5 +65,20 @@ SELECT e.empName, dbo.getDeptId(e.EmpId) AS
 DepartmentID FROM EMPLOYEE e;
 
 
+-- 2. Table-Valued Functions
+CREATE FUNCTION [dbo].[getEmpDetails] (@EmpId int)
+RETURN TABLE
+AS
+RETURN
+(
+    SELECT e.EmpName, e.EmpID, d.DeptName
+);
+GO
 
+-- Invoke the function as:
+SELECT * FROM dbo.getEmpDetails(4);
 
+-- result set:
+
+-- EmpName -- EmpId -- DeptName
+-- Musk -- 4 -- R&D
