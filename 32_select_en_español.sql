@@ -97,5 +97,11 @@ SELECT name FROM bbc
 -- Genau die richtige Größe
 -- 6.
 -- Welche Länder sind weder zu klein noch zu groß?
--- BE
+-- BETWEEN ermöglicht das Prüfen enes Werebereiches 
+-- einschließlich der Grenzwerte.
+-- Zeige die Ländernamen und Flächen in 1.000 km^2.
+-- Verwende area/1000 anstelle von area.
+SELECT name, area FROM bbc
+    WHERE area BETWEEN 207600 AND 244820
+
 
