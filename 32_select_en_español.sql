@@ -90,7 +90,7 @@ SELECT name, population FROM bbc
 -- Das Prozentzeichen (%) ist der Platzhalter (Wildcard).
 -- Das Beispiel zeight Länder, deren Namen mit dem Buchstaben D beginnen.
 -- Zeige Länder, deren Namen mit dem Buchstaben G beginnen.
-SELECTG name FROM bbc
+SELECT name FROM bbc
     WHERE name LIKE 'D%'
 
 
