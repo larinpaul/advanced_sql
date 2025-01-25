@@ -30,4 +30,14 @@ BEGIN
 END;
 
 
+-- 2. T-SQL Inline Table-Valued function syntax
+CREATE FUNCTION [ schema_name. ] <function_name> [
+(@parameterName datatype)]
+RETURNS TABLE
+AS
+RETURN
+(
+    T-SQL statements
+);
+GO
 
