@@ -73,7 +73,44 @@ SET
 -- in the rows affected by a trigger.
 -- OLD and NEW are MySQL extensions to triggers; they are not case-sensitive
 
--- ..
+-- ...
+
+-- The following example illustrates the points.
+-- It defines an UPDATE trigger that checks the new value to be used for updating each row,
+-- and modifies the value to be within the range from 0 to 100.
+-- This must be a BEFORE trigger because the value must be checked
+-- before it is used to update the row:
+
+-- mysql>
+delimiter //
+-- mysql>
+CREATE TRIGGER upd_check BEFORE UPDATE ON account
+FOR EACH ROW
+BEGIN
+    IF NEW.amount < 0 THEN
+        SET NEW.amount = 0;
+    ELSEIF NEW.amount > 100 THEN
+        SET NEW.amount = 100;
+    END IF;
+END;//
+-- mysql>
+delimiter ;
+
+-- It can be easier to define a stored procedure separetely and then invoke it
+-- from the trigger using a simple CALL statement.
+
+-- ...
+
+-- The trigger cannot use the CALL statement to invoke stored procedures
+-- that return data to the client or that use dynamic SQL.
+-- (Stored procedures are permitted to return data to the trigger
+-- through OUT or INOUT parameters.)
+
+-- The trigger cannot use statement that explicitly or implicitly 
+-- begin or end a transaction, such as START TRANSACTION, COMMIT, or ROLLBACK.
+-- (ROLLBACK to SAVEPOINT is permitted because it does not end a transaction.)
+
+-- See also Section 27.8, "Restrictions on Stored Programs".
 
 
 
