@@ -46,6 +46,15 @@ SELECT @sum AS 'Total amount inserted';
 +-----------------------+
 */
 
+-- In this case, the value of @sum after the INSERT statement has executed
+-- is 14.98 + 1937.50 - 100, or 1852.48.
+
+-- To the destroy the trigger, use a DROP TRIGGER statement.
+-- You must specify the schema name if the trigger is not in the default schema:
+DROP TRIGGER test.ins_num;
+
+-- If you trop a table, any triggers for the table are also dropped.
+
 
 
 
