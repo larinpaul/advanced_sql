@@ -55,6 +55,26 @@ DROP TRIGGER test.ins_num;
 
 -- If you trop a table, any triggers for the table are also dropped.
 
+-- It is possible to define multiple triggers for a given table that have the same trigger event and action time.
+-- For example, two BEFORE UPDATE triggers for a table.
+-- To affect trigger order, specify a clause after FOR EACH ROW
+-- that indicates FOLLOWS or PRECEDES and the name of an existing trigger
+-- that also has the same trigger event and action time.
+
+CREATE TRIGGER ins_transaction BEFORE INSERT ON account
+FOR EACH ROW PRECEDES ins_sum
+SET
+@deposits = @deposits + IF(NEW.amount>0,NEW.amount,0),
+@withdrawals = @withdrawals + IF(NEW.amount<0,-NEW.amount,0);
+
+-- ...
+
+-- Within the trigger body, the OLD and NEW keywords enable your to access columns
+-- in the rows affected by a trigger.
+-- OLD and NEW are MySQL extensions to triggers; they are not case-sensitive
+
+-- ..
+
 
 
 
