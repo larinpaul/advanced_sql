@@ -23,6 +23,29 @@ CREATE TRIGGER ins_sum BEFORE INSERT ON account
         FOR EACH ROW SET @sum = @sum + NEW.amount;
 -- Query OK, 0 rows affected (0.01 sec)
 
+-- Wokrs with:
+-- BEFORE or AFTER
+-- INSERT or DELETE or UPDATE
+-- The statement following FOR EACH ROW defines the trigger body,
+-- that is, the statement to execute each time the trigger activates,
+-- which occurs once for each row affected by the trigger event.
+-- Here the statement refers to the column as NEW.amount
+-- which means "the value of the amount column to be inserted into the new row."
+
+-- To use the trigger, set the accumulator variable to zero,
+-- execute an INSERT statement,
+-- and then see what value the variable has afterward:
+SET @sum = 0;
+INSERT INTO account VALUES(137,14.98),(141.1937.50),(97,-100.00);
+SELECT @sum AS 'Total amount inserted';
+/*
++-----------------------+
+| Total amount inserted |
++-----------------------+
+|               1852.48 |
++-----------------------+
+*/
+
 
 
 
