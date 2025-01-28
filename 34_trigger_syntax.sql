@@ -145,3 +145,74 @@ INSERT INTO test3 (a3) VALUES
 
 INSERT INTO test4 (a4) VALUES
     (0), (0), (0), (0), (0), (0), (0), (0), (0), (0);
+
+
+--  Suppose that you insert the following values into table test1 as shown here:
+
+-- mysql>
+INSERT INTO test1 VALUES
+    (1), (3), (1), (7), (1), (8), (4), (4);
+-- Query OK, 8 rows affected (0.01 sec)
+-- Records: 8   Duplicates: 0   Warnings: 0
+
+-- As a result, the four rables contain the following data:
+-- mysql> 
+SELECT * FROM test1;
+mysql> SELECT * FROM test1;
++------+
+| a1   |
++------+
+|    1 |
+|    3 |
+|    1 |
+|    7 |
+|    1 |
+|    8 |
+|    4 |
+|    4 |
++------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT * FROM test2;
++------+
+| a2   |
++------+
+|    1 |
+|    3 |
+|    1 |
+|    7 |
+|    1 |
+|    8 |
+|    4 |
+|    4 |
++------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT * FROM test3;
++----+
+| a3 |
++----+
+|  2 |
+|  5 |
+|  6 |
+|  9 |
+| 10 |
++----+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM test4;
++----+------+
+| a4 | b4   |
++----+------+
+|  1 |    3 |
+|  2 |    0 |
+|  3 |    1 |
+|  4 |    2 |
+|  5 |    0 |
+|  6 |    0 |
+|  7 |    1 |
+|  8 |    1 |
+|  9 |    0 |
+| 10 |    0 |
++----+------+
+10 rows in set (0.00 sec)
