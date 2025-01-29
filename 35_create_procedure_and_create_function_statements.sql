@@ -45,3 +45,53 @@ routine_body:
 -- To invoke a stored procedure, use the CALL statement (see Section 15.2.1, "CALL Statement")
 
 
+-- The following example shows a simple procedure that,
+-- given a country code, counts the number of cities for that country that appear in the city table
+-- of the world database.
+-- The country code is passed using an IN parameter,
+-- and the city count is returned using an OUT parameter:
+
+-- mysql>
+delimiter //
+
+-- mysql> 
+CREATE PROCEDURE citycount (IN country CHAR(3), OUT cities INT)
+    BEGIN
+        SELECT COUNT(*) INTO cities FROM world.city
+        WHERE CountryCode = country;
+    END//
+-- Query OK, 0 rows affected (0.01 sec)
+
+-- mysql>
+delimiter ;
+
+-- mysql>
+CALL citycount('JPN', @cities); -- cities in Japan
+-- Query OK, 1 row affected (0.00 sec)
+
+-- mysql>
+SELECT @cities;
+-- +---------+
+-- | @cities |
+-- +---------+
+-- |     248 |
+-- +---------+
+-- 1 row in set (0.00 sec)
+
+-- mysql>
+CALL citycount('FRA', @cities); -- cities in France
+-- Query OK, 1 row affected (0.00 sec)
+
+-- mysql>
+SELECT @cities;
+-- +---------+
+-- | @cities |
+-- +---------+
+-- |      40 |
+-- +---------+
+-- 1 row in set (0.00 sec)
+
+
+
+
+
