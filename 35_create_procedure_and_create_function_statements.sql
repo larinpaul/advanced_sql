@@ -131,6 +131,39 @@ SELECT hello('world'):
 -- MySQL perimits routines to contain DDL statements, such as CREATE and DROP.
 -- MySQL also permits stored procedures (but not stored functions) to contain SQL transaction statements such as COMMIT.
 
+-- Statements that return a result set can be used within a stored procedure but not within a stored function.
+-- This prohibition includes SELECT statements that do not have an INTO var_list clause
+-- and other statements such as SHOW, EXPLAIN, and CHECK TABLE.
+
+-- ...
+
+-- USE statements within stored routines are not permitted.
+-- When a routine is invoked, an implicit USE db_name is performed
+-- (and undone when the routine terminates).
+-- This causes the routine to have the given default database while it executes.
+-- References to objects in databases other than the routine default database
+-- should be qualified with the appropriate database name.
+
+-- ...
+
+-- A routine is considered "determenistic" if it always produces the same result for the same input parameters,
+-- and "not determenistic" otherwise.
+
+-- ...
+
+-- Within the body of a stored routine that is defined with SQL SECURITY DEFINER characteristic,
+-- the CURRENT USER https://dev.mysql.com/doc/refman/8.4/en/information-functions.html#function_current-user
+-- function returns the routine's DEFINER value.
+-- For information about user auditing within stored routines, see
+-- Section 8.2.23, "SQL-Based Account Activity Auditing". -- https://dev.mysql.com/doc/refman/8.4/en/account-activity-auditing.html
+
+-- Consider the following procedure, which displays a count of the number of MySQL accounts
+-- listed in the mysql.user system table:
+CREATE DEFINED = 'admin'@'localhost' PROCEDURE account_count()
+BEGIN
+    SELECT 'Number of accounts:', COUNT(*) FROM mysql.user;
+END;
+
 
 
 
