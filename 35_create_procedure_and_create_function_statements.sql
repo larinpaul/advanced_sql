@@ -91,6 +91,45 @@ SELECT @cities;
 -- +---------+
 -- 1 row in set (0.00 sec)
 
+-- The example uses the mysql client delimiter command
+-- to change the statement delimiter from ; to //
+-- while the procedure is being befined.
+-- This enables the ; delimiter used in the procedure body to be passed through to the server
+-- rather than being interpreted by mysql itsef.
+-- See Section 27.1, "Defining Stored Programs" -- https://dev.mysql.com/doc/refman/8.4/en/stored-programs-defining.html
+
+-- ...
+
+-- The following example function takes a parameter,
+-- performs an operation using an SQL function, and returns the result.
+-- In this case, it is unnecessary to use delimiter
+-- because the function definition contains to internal ; statement delimiters:
+
+/*
+-- mysql>
+CREATE FUNCTION hello (s CHAR(20))
+RETURNS CHAR(50) DETERMENISTIC
+RETURN CONCAT('Hello, ',s,'!');
+-- mysql>
+SELECT hello('world'):
++----------------+
+| hello('world') |
++----------------+
+| Hello, world!  |
++----------------+
+1 row in set (0.00 sec)
+*/
+
+-- ...
+
+-- The routine_bdy consists of a valid SQL routine statement.
+-- This can be a simple statement such as  SELECT or INSERT,
+-- or a compound statement written using BEGIN and END.
+-- Compound statements can contain declarations, loops, and other control structure statements.
+-- The syntax for these statements is described in Section 15.6, "Compound Statement Syntax". -- https://dev.mysql.com/doc/refman/8.4/en/sql-compound-statements.html
+
+-- MySQL perimits routines to contain DDL statements, such as CREATE and DROP.
+-- MySQL also permits stored procedures (but not stored functions) to contain SQL transaction statements such as COMMIT.
 
 
 
