@@ -8,7 +8,7 @@
 CREATE
     [DEFINER = user]
     PROCEDURE [IF NOT EXISTS] sp_name ([proc_parameter[,...]])
-    [chracteristic ...] routine_body
+    [characteristic ...] routine_body
 
 CREATE
     [DEFINER = user]
@@ -164,6 +164,4 @@ BEGIN
     SELECT 'Number of accounts:', COUNT(*) FROM mysql.user;
 END;
 
-
-
-
+-- ...
