@@ -12,6 +12,27 @@
 -- Table 14.1. Built-In Functions and Operators
 
 -- Name -- Description -- Deprecated
+&
+>
+>>
+>=
+<
+<>,!=
+<<
+<=
+<=>
+%,MOD
+*
++
+-
+-
+->
+->>
+/
+:=
+=
+=
+^
 
 
 
