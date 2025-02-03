@@ -179,6 +179,25 @@ INTERNAL_MAX_DATA_LENGTH()
 INTERNAL_TABLE_ROWS()
 INTENRAL_UPDATE_TIME()
 INTERNAL() -- Return the index of the argument that is less than the first argument
-
+IS
+IS_FREE_LOCK()
+IS_NOT
+IS_NOT_NULL
+IS_NULL
+IS_USED_LOCK()
+IS_UUID()
+ISNULL()
+JSON_ARRAY()
+JSON_ARRAY_APPEND()
+JSON_ARRAY_INSERT()
+JSON_ARRAYAGG() -- Return result set as a single JSON array
+JSON_CONTAINS() -- Whether JSON document contains specific object at path
+JSON_CONTAINS_PATH() -- Whether JSON document contains any data at path
+JSON_DEPTH() -- Maximum depth of JSON document
+JSON_EXTRACT()
+JSON_INSERT()
+JSON_KEYS()
+JSON_LENGTH()
+JSON_MERGE()
 
 
