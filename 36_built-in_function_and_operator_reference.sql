@@ -218,4 +218,36 @@ JSON_TABLE()
 JSON_TYPE()
 JSON_UNQUOTE()
 JSON_VALID()
+LAG()
+LAST_DAY
+LAST_INDEST_ID()
+LAST_VALUE()
+LCASE() -- Synonym for LOWER()
+LEAD() -- Value of argument from row leading current row within partition
+LEAST()
+LEFT()
+LENGTH()
+LIKE
+LineString()
+LN()
+LOAD_FILE()
+LOCALTIME(), LOCALTIME
+LOCALTIMESTAMP, LOCALTIMESTAMP()
+LOCATE()
+LOG()
+LOG10()
+LOG2()
+LOWER()
+LPAD() -- Return the string argument, left-padded with the specified string
+LTRIM() -- Remove leading spaces
+MAKE_SET()
+MAKEDATE()
+MAKETIME()
+MASTER_POS_WAIT() -- Block until the replica has read and applied all updates up to the specified position
+MATCH() 
+MAX()
+MBRContains() -- Whether MBR of one geometry contains MBR of another
+
+
+
 
