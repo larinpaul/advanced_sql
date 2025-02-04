@@ -267,7 +267,15 @@ MONTHNAME()
 MultiLineString()
 MultiPoint()
 MultiPolygon()
-
+NAME_CONST() -- Causes the column to have the given name
+NOT, !
+NOT BETWEEN ... AND ... -- Whether avalue is not within a range of values
+NOT_EXISTS() -- Whether the result of a query contains no rows
+NOT_IN()
+NOT_LIKE
+NOT_REGEXP -- Negation of REGEXP
+NOW()
+NTH_VALUE() -- V
 
 
 
