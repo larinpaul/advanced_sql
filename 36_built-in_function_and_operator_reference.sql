@@ -276,6 +276,11 @@ NOT_LIKE
 NOT_REGEXP -- Negation of REGEXP
 NOW()
 NTH_VALUE() -- Value of argument from the N-th row of window frame
-
+NTILE() -- Bucket number of current row within its partition.
+NULLIF() -- Return NULL if expr1 = expr2
+OCT() -- A string containing octal representaion of a number
+OCTET_LENGTH() -- Synonym for LENGTH(0
+OR, ||
+ORD -- Return character code for leftmost character of the argument
 
 
