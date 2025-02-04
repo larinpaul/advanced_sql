@@ -275,7 +275,7 @@ NOT_IN()
 NOT_LIKE
 NOT_REGEXP -- Negation of REGEXP
 NOW()
-NTH_VALUE() -- V
+NTH_VALUE() -- Value of argument from the N-th row of window frame
 
 
 
