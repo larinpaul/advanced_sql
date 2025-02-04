@@ -257,7 +257,16 @@ MBRTouches()
 MBRWithin()
 MB5() -- Calculate the MBR5 checksum. A checksum is aadigit representing the sum of the correct digits in a piece of stored or transmitted digital data, against which later comparisons can be made to detect errors in the data
 MEMBER_OF()
-
+MICROSECOND()
+MID() -- Return a substring starting from the specified position
+MIN()
+MINUTE()
+MOD()
+MONTH()
+MONTHNAME()
+MultiLineString()
+MultiPoint()
+MultiPolygon()
 
 
 
