@@ -247,6 +247,17 @@ MASTER_POS_WAIT() -- Block until the replica has read and applied all updates up
 MATCH() 
 MAX()
 MBRContains() -- Whether MBR of one geometry contains MBR of another
+MBRCoveredBy() -- Whether one MBR is ocovered by another -- Minimum Bounding Rectangles
+MBRCovers()
+MBRDisjoint()
+MBREquals()
+MBRIntersects()
+MBROverlaps()
+MBRTouches()
+MBRWithin()
+MB5() -- Calculate the MBR5 checksum. A checksum is aadigit representing the sum of the correct digits in a piece of stored or transmitted digital data, against which later comparisons can be made to detect errors in the data
+MEMBER_OF()
+
 
 
 
