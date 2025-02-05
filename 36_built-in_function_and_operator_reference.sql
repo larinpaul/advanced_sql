@@ -297,7 +297,19 @@ QUARTER() -- Return the quarter from a date argument
 QUOTE()
 RADIANS()
 RAND() -- Return a random floating-point value
-
+RANDOM_BYTES() -- Return a random bytes vector
+RANK()
+REGEXP -- Whether string matches regular expression
+REGEXP_INSTR()
+REGEXP_LIKE()
+REGEXP_REPLACE()
+RELEASE_ALL_LOCKS()
+RELEASE_LOCK()
+REPEAT() -- Repeat a string the spoecified number of times
+REVERSE()
+RIGHT() -- Return the specified rightmost number of characters
+RLIKE()
+ROLES_GRAPHML() -- Return a GraphML document representing memory role subgraphs
 
 
 
