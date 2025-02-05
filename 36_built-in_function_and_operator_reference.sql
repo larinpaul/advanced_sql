@@ -316,5 +316,15 @@ ROW_NUMBER()
 RPAD()
 RTRIM()
 SCHEMA()
+SEC_TO_TIME()
+SECOND()
+SESSION_USER()
+SHA1(), SHA() -- Calculate an SHA-1 160-bit checksum
+SHA2() -- Calculate an SHA-2 checksum
+SIGN()
+SIN()
+SLEEP()
+SOUNDEX() -- Return a soundex string
+SOUNDS_LIKE() -- Compare sounds
 
 
