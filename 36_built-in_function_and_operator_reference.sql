@@ -310,6 +310,11 @@ REVERSE()
 RIGHT() -- Return the specified rightmost number of characters
 RLIKE()
 ROLES_GRAPHML() -- Return a GraphML document representing memory role subgraphs
-
+ROUND()
+ROW_COUNT()
+ROW_NUMBER()
+RPAD()
+RTRIM()
+SCHEMA()
 
 
