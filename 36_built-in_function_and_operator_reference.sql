@@ -282,5 +282,22 @@ OCT() -- A string containing octal representaion of a number
 OCTET_LENGTH() -- Synonym for LENGTH(0
 OR, ||
 ORD -- Return character code for leftmost character of the argument
+PERCENT_RANK()
+PERIOD_ADD()
+PERIOD_DIFF()
+PI()
+Point() -- Construct Point from coordinates
+Polygon() -- Construct a Polygon from coordinates
+POSITION() -- Synonym for LOCATE()
+POW()
+POWER()
+PS_CURRENT_THREAD_ID()
+PS_THREAD_ID()
+QUARTER() -- Return the quarter from a date argument
+QUOTE()
+RADIANS()
+RAND() -- Return a random floating-point value
+
+
 
 
