@@ -326,5 +326,15 @@ SIN()
 SLEEP()
 SOUNDEX() -- Return a soundex string
 SOUNDS_LIKE() -- Compare sounds
-
+SOURCE_POS_WAIT()
+SPACE()
+SQRT()
+ST_Area() -- Return Polygon or MultiPolygon area
+ST_AsBinary(), ST_AsWKB() -- Convert from internal geometry format to WKB
+ST_AsGeoJSON()
+ST_AsText(), ST_AsWKT()
+ST_Buffer() -- Return geometry of points within given distance from geometry
+ST_Buffer_Strategy()
+ST_Centroid
+ST_Collect()
 
