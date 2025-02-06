@@ -337,4 +337,12 @@ ST_Buffer() -- Return geometry of points within given distance from geometry
 ST_Buffer_Strategy()
 ST_Centroid
 ST_Collect()
+ST_Contains()
+ST_ConvexHull() -- Return convex hull of geometry
+ST_Crosses()
+ST_Difference() -- Return point set difference of two geometries
+ST_Dimension()
+ST_Disjoint()
+ST_Distance()
+ST_Distance_Sphere()
 
