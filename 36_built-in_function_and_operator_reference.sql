@@ -355,6 +355,9 @@ ST_GeomCollFromText(), ST_GeometryCollectionFromText(), ST_GeomCollFromTxt() -- 
 ST_GeomCollFromWKB(), ST_GeometryFollectionFromWKB() -- Return geometry collection from WKB
 ST_GeometryN() -- Return N-th geometry from geometry collection
 ST_GeometryType()
-
-
+ST_GeomFromGeoJSON() 
+ST_GeomFromText(), ST_GeometryFromText()
+ST_GeomFromWKB(), ST_GeometryFromWKB()
+ST_HausdorfDistance() 
+ST_InteriorRingN()
 
