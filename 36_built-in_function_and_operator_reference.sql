@@ -345,4 +345,16 @@ ST_Dimension()
 ST_Disjoint()
 ST_Distance()
 ST_Distance_Sphere()
+ST_EndPoint()
+ST_Envelope()
+ST_Equals()
+ST_ExteriorRing() -- Return exterior ring of Polygon
+ST_FrechetDistance()
+ST_GeoHash()
+ST_GeomCollFromText(), ST_GeometryCollectionFromText(), ST_GeomCollFromTxt() -- Return geometry collection from WKT
+ST_GeomCollFromWKB(), ST_GeometryFollectionFromWKB() -- Return geometry collection from WKB
+ST_GeometryN() -- Return N-th geometry from geometry collection
+ST_GeometryType()
+
+
 
