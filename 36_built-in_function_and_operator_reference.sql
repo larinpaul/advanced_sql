@@ -371,5 +371,5 @@ ST_Latitude()
 ST_Length()
 ST_LineFromText(), ST_LineStringFromText()
 ST_LineFROM_WKB(), ST_LineStringFromWKB()
-ST_LineInterpolation()
+ST_LineInterpolatePoint()
 
