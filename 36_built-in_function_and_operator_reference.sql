@@ -372,4 +372,8 @@ ST_Length()
 ST_LineFromText(), ST_LineStringFromText()
 ST_LineFROM_WKB(), ST_LineStringFromWKB()
 ST_LineInterpolatePoint()
+ST_LineInterpolatePoints()
+ST_LongFromGeoHash()
+ST_Longitude()
+ST_MakeEnvelope()
 
