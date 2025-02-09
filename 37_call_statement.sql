@@ -40,9 +40,11 @@ DELIMITER ;
 -- MySQL Server supports three comment styles:
 * FROM a # character to the end of the line.
 * From a -- sequence to the end of the line.
-* From a /* sequence to the following * /sequence, as in the C programming language
+* From a /* sequence to the following */ sequence, as in the C programming language
 
-
+-- PHP Supprts two types of comments:
+-- single-line comments, denoted by "//" or "#" at the beginning of a line,
+-- and multi-line comments enclosed between "/*" and "*/" 
 
 
 
