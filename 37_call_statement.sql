@@ -53,3 +53,18 @@ DELIMITER ;
 -- HACK -- A temporary workaround
 -- @deprecated
 
+
+-- Before calling the procedure, initialize the variable to be passed as the INOUT parameter.
+-- After calling the procedure, you can see the values of the two variables are set or modified:
+mysqL>
+SET @increment - 10;
+mysql>
+CALL p(@version, @increment);
+mysql>
+SELECT @version, @increment;
+
++----------+------------+
+| @version | @increment |
++----------+------------+
+| 8.4.4   |         11 |
++----------+------------+
