@@ -46,5 +46,10 @@ DELIMITER ;
 -- single-line comments, denoted by "//" or "#" at the beginning of a line,
 -- and multi-line comments enclosed between "/*" and "*/" 
 
-
+-- Comment tags in PHP
+-- TODO
+-- FIXME
+-- NOTE
+-- HACK -- A temporary workaround
+-- @deprecated
 
