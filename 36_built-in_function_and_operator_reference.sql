@@ -392,9 +392,70 @@ ST_PolyFromText(), ST_PolygonFromText()
 ST_PolyFromWKB(), ST_PolygonFromWKB()
 ST_Simplify()
 ST_SRID() -- Return spatial reference system ID for geometry
-
-
-
-
-
-
+ST_StartPoint()
+ST_SwapXY()
+SY_SymDifference() -- Return point set symmetric difference of two geometries
+ST_Touches()
+ST_Transform()
+ST_Union()
+ST_Validate()
+ST_Within()
+ST_X()
+ST_Y()
+STATEMENT_DIGEST() -- Compute statement digest hash value
+STATEMENT_DIGEST_TEXT() -- Compute normalized statement digest
+STD() -- Return the population standard deviation
+STDDEV() -- Return the population standard deviation
+STDDEV_POP() -- Return the population standard deviation
+STDDEV_SAMP() -- Return the sampel standard deviation
+STR_TO_DATE() -- Convert a string to a date
+STRCMP()
+SUBDATE() -- Synonym for DATE_SUM() when invoked with three arguments
+SUBSTR()
+SUBSTRING()
+SUBSTRING_INDEX()
+SUBTIME()
+SUM()
+SYSDATE()
+SYSTEM_USER() -- Synonym for USER()
+TAN()
+TIME() -- Extract the time potion of the expression passed
+TIME_FORMAT()
+TIME_TO_SEC()
+TIMEDIFF()
+TIMESTAMP()
+TIMESTAMPADD()
+TIMESTAMPDIFF()
+TO_DAYS()
+TO_SECONDS()
+TRIM()
+TRUNCATE()
+UCASE()
+UNCOMPRESS()
+UNCOMPRESSED_LENGTH()
+UNHEX()
+UNIX_TIMESTAMP()
+UpdateXML()
+UPPER()
+USER()
+UTC_DATE()
+UTC_TIME()
+UTC_TIMESTAMP()
+UUID() -- Return a Universal Unique Identifier (UUID)
+UUID_SHORT -- Return an integer-valued universal identifier
+VALIDATE_PASSWORD_STRENGTH()
+VALUES() -- Define the values to be used during an INSERT
+VAR_POP()  -- Return the population standard variance
+VAR_SAMP()
+VARIANCE()
+VERSION()
+WAIT_FOR_EXECUTED_GTID_SET()
+WEEK() -- Return the week number
+WEEKDAY() -- Retunr the weekday index
+WEEKOFYEAR() -- Retrun the calendar week of the date (1-53)
+WEIGHT_STRING() -- Return the weight string for a string
+XOR -- Logical XOR
+YEAR()
+YEARWEEK() -- Return the year and week
+| -- Bitwise OR
+~ -- Bitwise inversion
