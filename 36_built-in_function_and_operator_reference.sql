@@ -382,3 +382,19 @@ ST_MPolyFromText(), ST_MultiPolygonFromText()
 ST_NumGeometries()
 ST_NumInteriorRing(), ST_NumInteriorRings()
 ST_NumPoints()
+ST_Overlaps()
+ST_PointAtDistance()
+ST_PointFromGeoHash()
+ST_PointFromText()
+ST_PointFromWKB()
+ST_PointN()
+ST_PolyFromText(), ST_PolygonFromText()
+ST_PolyFromWKB(), ST_PolygonFromWKB()
+ST_Simplify()
+ST_SRID() -- Return spatial reference system ID for geometry
+
+
+
+
+
+
