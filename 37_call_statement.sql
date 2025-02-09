@@ -37,6 +37,12 @@ END //
 
 DELIMITER ;
 
+-- MySQL Server supports three comment styles:
+* FROM a # character to the end of the line.
+* From a -- sequence to the end of the line.
+* From a /* sequence to the following * /sequence, as in the C programming language
+
+
 
 
 
