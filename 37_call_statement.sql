@@ -68,3 +68,28 @@ SELECT @version, @increment;
 +----------+------------+
 | 8.4.4   |         11 |
 +----------+------------+
+
+
+-- In prepared CALL statements used with PREPARE and EXECUTE,
+-- placeholders can be used for IN parameters, OUT, and INOUT parameters.
+-- These types of parameters can be used as follows:
+SET @increment = 10;
+PREPARE s FROM 'CALL p(?, ?)';
+EXECUTE s USING @version, @increment;
+SELECT @version, @increment;
+
++----------+------------+
+| @version | @increment |
++----------+------------+
+| 8.4.4   |         11 |
++----------+------------+
+
+-- To wrote C programs that use the CALL SQL statement to execute stored procedures that produce result sets,
+-- the CLIENT_MULTI_results flag must be enabled.
+
+-- ...
+
+
+
+
+
