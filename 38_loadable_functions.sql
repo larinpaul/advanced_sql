@@ -40,6 +40,6 @@ asynchronous_connection_failover_add_managed()
 asynchronous_connection_failover_add_source()
 asynchronous_connection_failover_delete_managed()
 asynchronous_connection_failover_delete_source()
-audit_api_message_emit-udf()
+audit_api_message_emit_udf()
 
 
