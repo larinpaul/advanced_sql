@@ -12,7 +12,17 @@
 -- whic hare implemented as part of the server and a always available;
 -- for a table, see Section 14.1, "Built-In Function and Operator Reference". -- https://dev.mysql.com/doc/refman/8.4/en/built-in-function-reference.html
 
-
+-- MySQL distributions include loadable functions that implement, in whole or in part, these server capabilities:
+-- * Group Replication
+-- * Encryption operations
+-- * Masking and de-identification
+-- * Audit logging for monitoring and logging of connection and query activity
+-- * Application-level firewall
+-- * A query rewriter
+-- * Version tokens
+-- * The MySQL Keyring
+-- * A locking service
+-- * A function provides access to query attributes
 
 
 
