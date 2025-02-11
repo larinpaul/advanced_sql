@@ -25,7 +25,21 @@
 -- * A function provides access to query attributes
 
 
+-- 14.2 Loadable Function Reference
+-- https://dev.mysql.com/doc/refman/8.4/en/loadable-function-reference.html
 
+-- Table 14.2. Loadable Functions
 
+-- Name -- Description -- Deprecated
+asymmetric_decrypt() -- Decrypt ciphertext using private or public key
+asymmetric_derive() -- Derive symmetric key from asymmetric keys
+asymmetric_encrypt()
+asymmetric_sing() -- Generate signature from digest
+asymmetric_verify()
+asynchronous_connection_failover_add_managed()
+asynchronous_connection_failover_add_source()
+asynchronous_connection_failover_delete_managed()
+asynchronous_connection_failover_delete_source()
+audit_api_message_emit-udf()
 
 
