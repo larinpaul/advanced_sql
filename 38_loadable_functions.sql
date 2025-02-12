@@ -55,5 +55,25 @@ create_asymmetric_priv_key()
 create_asymmetric_pub_key()
 create_dh_parameters() -- Generate shared DH secret
 create_digest -- Generate digest from string
+firewall_group_delist() -- Remove account from firewall group profile
+firewall_group_enlist()
+flush_rewrite_rules()
+gen_blacklist() -- Perform dictionary term replacement -- yes
+gen_blocklist() -- Perform dictionary term replacement
+gen_blocklist()
+gen_dictionary() -- Return random term from dictionary
+gen_dictionary_drop()
+gen_dictionary_load()
+gen_range() -- Generate random number within range
+gen_rnd_canada_sin() -- Generate random Canada Social Insurance Number
+gen_rnd_email()
+gen_rnd_iban() -- Generate random International Bank Account Number
+gen_rnd_pan() -- Generate random payment card Primary Account Number
+gen_rnd_ssn() -- Generate random US Social Security Number
+gen_rnd_uk_nin() -- Generate random United Kingdom National Insurance Number 
+gen_rnd_us_phone()
+gen_rnd_uuis() -- Generate random Universally Unique Identifier
+
+
 
 
