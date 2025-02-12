@@ -41,5 +41,19 @@ asynchronous_connection_failover_add_source()
 asynchronous_connection_failover_delete_managed()
 asynchronous_connection_failover_delete_source()
 audit_api_message_emit_udf()
+audit_log_encryption_password_get()
+audit_log_encryption_password_set()
+audit_log_filter_flush()
+audit_log_filter_remove_filter()
+audit_log_filter_remove_user()
+audit_log_filter_set_filter()
+audit_log_filter_set_user()
+audit_log_read()
+audit_log_read_bookmark()
+audit_log_rotate()
+create_asymmetric_priv_key()
+create_asymmetric_pub_key()
+create_dh_parameters() -- Generate shared DH secret
+create_digest -- Generate digest from string
 
 
