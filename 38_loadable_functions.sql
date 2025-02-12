@@ -72,8 +72,20 @@ gen_rnd_pan() -- Generate random payment card Primary Account Number
 gen_rnd_ssn() -- Generate random US Social Security Number
 gen_rnd_uk_nin() -- Generate random United Kingdom National Insurance Number 
 gen_rnd_us_phone()
-gen_rnd_uuis() -- Generate random Universally Unique Identifier
-
+gen_rnd_uuid() -- Generate random Universally Unique Identifier
+group_replication_disable_member_action()
+group_replication_enable_member_action()
+group_replication_get_communication_protocoL()
+group_replication_get_write_concurrency()
+group_replication_reset_member_actions()
+group_replication_set_as_primary()
+group_replication_set_communication_protocol()
+group_replication_set_write_concurrency() -- Set maximum number of consensus instances executable in parallel
+group_replication_switch_to_multi_primary_mode()
+group_replication_switch_to_single_primary_mode()
+keyring_aws_rotate_cmk() -- Rotate AWS customer master key
+keyring_aws_rotate_keys() -- Rotate keys in keyring_aws storage file
+keyring_hashicorp_update_config() -- Cause runtime keyring_hashicorp reconfiguration
 
 
 
