@@ -86,6 +86,11 @@ group_replication_switch_to_single_primary_mode()
 keyring_aws_rotate_cmk() -- Rotate AWS customer master key
 keyring_aws_rotate_keys() -- Rotate keys in keyring_aws storage file
 keyring_hashicorp_update_config() -- Cause runtime keyring_hashicorp reconfiguration
-
+keyring_key_fetch()
+keyring_key_generate() -- Generate random keyring key
+keyring_key_length_fetch()
+keyring_key_remove()
+keyring_key_store()
+keyring_key_type_fetch()
 
 
