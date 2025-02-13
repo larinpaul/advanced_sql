@@ -92,5 +92,15 @@ keyring_key_length_fetch()
 keyring_key_remove()
 keyring_key_store()
 keyring_key_type_fetch()
+load_rewrite_rules()
+mask_canada_sin() -- Mask Canada Social Insurance Number -- Masks a Canada Social Insurance Number (SIN) and returns the number with all meaningful digits replaced by 'X' characters. An optional maskng character can be specified
+mask_iban() -- Mask International Bank Account Number
+mask_inner()
+mask_outer() -- Mask left and right parts of string
+mask_pan() -- Mask payment card Primary Account Number part of string
+mask_pan_relaxed -- Mask payment card Primary Account Number part of string
+mask_ssn() -- Mask US Social Security Number
+mask_ks_nin()
+mask_uuid()
 
 
