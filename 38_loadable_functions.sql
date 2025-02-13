@@ -102,5 +102,13 @@ mask_pan_relaxed -- Mask payment card Primary Account Number part of string
 mask_ssn() -- Mask US Social Security Number
 mask_ks_nin()
 mask_uuid()
+masking_dictionaries_flush() -- Cause masking_dictionaries cache to be reloaded from table. Requires the MASKING_DICTIONARIES_ADMIN privilege.
+masking_dicrionary_remove()
+masking_dictionary_term_add()
+masking_dictionary_term_remove()
+mysql_firewall_flush_status()
+mysql_query_attribute_string()
+normalize_statement() -- Normalize SQL statement to digest form
+
 
 
