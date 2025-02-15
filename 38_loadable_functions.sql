@@ -110,5 +110,7 @@ mysql_firewall_flush_status()
 mysql_query_attribute_string()
 normalize_statement() -- Normalize SQL statement to digest form
 read_firewall_group_allowlist() -- Update firewall group profile recorder-statement cache
+read_firewall_groups() -- Update firewall group profile cache
+read_firewall_users()
 
 
