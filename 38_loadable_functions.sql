@@ -112,5 +112,16 @@ normalize_statement() -- Normalize SQL statement to digest form
 read_firewall_group_allowlist() -- Update firewall group profile recorder-statement cache
 read_firewall_groups() -- Update firewall group profile cache
 read_firewall_users()
-
-
+read_firewall_whitelist()
+service_get_read_locks()
+service_get_write_locks()
+service_release_locks()
+set_firewall_group_mode()
+set_firewall_mode() -- Establish firewall account profile operational mode
+version_tokens_delete() 
+version_tokens_edit()
+version_tokens_lock_exclusive()
+version_tokens_lock_shared()
+version_tockens_set()
+version_tokens_show()
+version_tokens_unlock()
