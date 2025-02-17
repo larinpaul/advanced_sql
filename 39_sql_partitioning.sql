@@ -47,7 +47,29 @@
 -- if queries often filter data based on specific date ranges.
 
 
--- 
+-- Differences Between Partitioning Types
+
+-- The partition functiopn defines the logic for mapping each row's partition key value to a specific partition.
+-- Common partition functions include:
+-- * Range Partitioning: Assigns rows to partitions based on ranges of value in the partitioning key.
+-- For example, you could partition the customer orders table by year 
+-- based on the order_date column.
+-- * List Partitioning: Assigns rows to partitions based on specific values in the partitioning key.
+-- For example, you could partition a customer table by country based on the country column.
+-- * Hash Partitioning: Uses a hash partition function to distribute rows across partitions
+-- based on the partitioning key.
+-- This can be useful for achieving even data distribution and improving write performance,
+-- especially when the partitioning key is not frequently used in query filters.
+
+-- Each type of partitioning has its own advantages and use cases.
+-- Choosing the right partitioning type depends on your specific requirements and query patterns.
+
+-- Example: For the customer orders table,
+-- you could use a range partitioning scheme with partitions defined by year or month,
+-- depending on your query patterns.
+
+
+-- Partition Boundaries
 
 
 
