@@ -49,7 +49,7 @@
 
 -- Differences Between Partitioning Types
 
--- The partition functiopn defines the logic for mapping each row's partition key value to a specific partition.
+-- The partition function defines the logic for mapping each row's partition key value to a specific partition.
 -- Common partition functions include:
 -- * Range Partitioning: Assigns rows to partitions based on ranges of value in the partitioning key.
 -- For example, you could partition the customer orders table by year 
