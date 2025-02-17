@@ -35,6 +35,20 @@
 -- * Data Summarization
 
 
+-- Artitioning Concepts: A Comprehensive Guilde
+
+-- Partition Key
+-- The partition key is the column or set of columns that determines how data is distributed across partitions.
+-- Ideally, the partition key should be frequently used in query filters
+-- to enabble efficient partition pruning.
+-- Example:
+-- Consider a table storing customer orders.
+-- Partitoning the table by the order_date column would be a good choice
+-- if queries often filter data based on specific date ranges.
+
+
+-- 
+
 
 
 
