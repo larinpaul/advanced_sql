@@ -109,6 +109,10 @@ CREATE TABLE access_log(
   PARTITION pmax VALUES LESS THAN MAXVALUE
 );
 
+-- Benefints:
+-- * Queries filtering by access_date can be optimized by pruning irrelevant partitions.
+-- * Archiving or dropping older data becomes easier by simply dropping the corresponding partition.
+-- * Scalability is enhanced as additional partitions can be added to accommodate new data.
 
 
 
