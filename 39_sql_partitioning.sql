@@ -71,6 +71,16 @@
 
 -- Partition Boundaries
 
+-- Partition boundaries define the specifid values or ranges that determine which partition
+-- a particular row belongs to. These boundaries are crucial for the partition function
+-- to correctly map rows to partitions.
+
+-- Example: If you partition the customer orders table by year, 
+-- the partition boundary values could be definede as '2022-01-01', '2023-01-01', and so on.
+-- Rows with an order_date in 2022 would be storedin the p2022 partition, and so on.
+
+
+
 
 
 
