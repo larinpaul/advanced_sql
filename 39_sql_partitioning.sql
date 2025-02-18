@@ -80,6 +80,37 @@
 -- Rows with an order_date in 2022 would be storedin the p2022 partition, and so on.
 
 
+-- SQL Partitioning in Practice: Concrete Examples
+
+-- Let's see how partitioning can be applied in real-world scenarios:
+
+
+-- Scenario 1: Time-based Partitioning for Website Access Logs
+
+-- Imagine a table storing website access logs, expected to grow significantly over time.
+-- Queries often involve filtering based on the access date.
+
+-- Solution: Partition the table by the access_date column using range partitioning.
+-- This allows efficient management and querying of data
+-- based on specific date ranges.
+
+
+-- PARTITION BY clause
+
+CREATE TABLE access_log(
+    id INT NOT NULL AUTO_INCREMENT,
+    access_date DATE NOT NULL,
+    user_id INT NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id, access_date)
+) PARTITION BY RANGE(YEAR(access_date)) (
+  PARTITION p2022 VALUES LESS THAN (2023),
+  PARTITION p2023 VALUES LESS THAN (2024),
+  PARTITION pmax VALUES LESS THAN MAXVALUE
+);
+
+
+
 
 
 
