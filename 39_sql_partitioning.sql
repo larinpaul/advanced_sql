@@ -115,7 +115,32 @@ CREATE TABLE access_log(
 -- * Scalability is enhanced as additional partitions can be added to accommodate new data.
 
 
+-- Scenario 2: List Partitioning for Customer Data by Country
 
+-- Consider a large customer table with a country column.
+-- Frequent queries and reports are based on specific countires.
 
+-- Solution: Utilize list partitioning to partition the table by the country column,
+-- enabling efficient querying and management of data for individual countries.
+
+-- PARTITION BY clause:
+
+CREATE TABLE customers (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  country VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+) PARTITION BY LIST (country) (
+  PARTITION pUSA VALUES IN ('USA'),
+  PARTITION pUK VALUES IN ('UK'),
+  PARTITION pIndia VALUES IN ('India'),
+  PARTITION pOther VALUES IN (DEFAULT)
+);
+
+-- Benefits:
+-- * Queries filtering by specific countries can be optimized by accessing
+-- only the relevant partitions.
+-- * Managing data for specific countries becomes easier,
+-- as data can be archived or deleted by dropping the corresponding partition.
 
 
