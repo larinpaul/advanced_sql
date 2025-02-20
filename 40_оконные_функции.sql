@@ -33,6 +33,18 @@
 -- Все примеры основаны на датасете олимпийских медалистов от Datacamp.
 -- Таблица называется summer_medals и содержит результаты Олимпиад с 1896 по 2010:
 
+-- ROW_NUMBER и ORDER BY
+
+-- Как уже говорилось выше, оператор OVER создаёт оконную функцию.
+-- Начнем с простой функции ROW_NUMBER, которая присваивает номер каждой выбранной записи:
+
+SELECT
+athlete,
+event,
+ROW_NUMBER() OVER() AS row_number
+FROM Summer_Medals
+ORDER BY row_numbers ASC;
+
 
 
 
