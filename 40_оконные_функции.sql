@@ -97,4 +97,30 @@ ORDER BY Gender ASC, Year ASC;
 -- Функция LEAD похожа на LAG, но вместо предыдущей строки возвращает следующую.
 -- Можно узнать, кто стал следующим чемпионом после того или иного спортсмена:
 
--- Табличное выражение ищет 
+-- Табличное выражение ищет теннисных чемпионов и выбирает нужные столбцы
+WITH Tennis_Gold AS (
+SELECT
+Athlete,
+Gender,
+Year,
+Country
+FROM
+Summer_Medals
+WHERE
+Year >= 2004 AND
+Sport = 'Tennis' AND
+event = 'Singles' AND
+Medal = 'Gold'
+)
+-- Оконная функция разделяет по полу и берёт чемпиона из следующей строки
+SELECT
+Athlete as Champion,
+Gender,
+Year,
+LEAD(Athlete) OVER (PARTITION BY gender
+ORDER BY Year ASC) AS Future_Champion
+FROM Tennis_Gold
+ORDER BY Gender ASC, Year ASC;
+
+
+
