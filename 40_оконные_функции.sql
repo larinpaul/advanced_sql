@@ -90,3 +90,11 @@ LAG(Athlete) OVER (PARTITION BY gender
 ORDER BY Year ASC) AS Last_Champion
 FROM Tennis_Gold
 ORDER BY Gender ASC, Year ASC;
+
+
+-- LEAD
+
+-- Функция LEAD похожа на LAG, но вместо предыдущей строки возвращает следующую.
+-- Можно узнать, кто стал следующим чемпионом после того или иного спортсмена:
+
+-- Табличное выражение ищет 
