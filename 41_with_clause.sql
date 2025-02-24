@@ -53,4 +53,9 @@ FROM cte;
 -- Examples 1 & 2: Salary Information
 
 
+-- Sharding disperses data across various databases or servers,
+-- while partitioning segregates data within a single database instance into subsets.
+
+
+
 
