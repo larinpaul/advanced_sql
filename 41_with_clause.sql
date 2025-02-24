@@ -38,4 +38,19 @@ WITH cte AS (
 SELECT ...
 FROM cte;
 
+-- Let's take a look at the key parts of the syntax.
+-- The CTE is always, without exception,
+-- initiated by the WITH clause.
+-- The CTE name then follows, which is cte in the above generic example.
+-- After the CTE name comes the keyword AS.
+-- What follows in the parentheses is the definition of CTE.
+-- In the very simple example, this is just a SELECT statement.
+-- Finally, there's the main query (like with regular subqueries) that references the CTE.
+
+-- Mind you, this is basic syntax. We're going to revisit it in the examples.
+-- Along the way, you'll also see how this basic syntax can be extended by writing multiple or nested CTEs. -- https://learnsql.com/blog/cte-with-examples/
+
+-- Examples 1 & 2: Salary Information
+
+
 
