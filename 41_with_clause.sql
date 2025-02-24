@@ -26,5 +26,16 @@
 -- Since it's a kind of table, you can reference the CTE in the FROM clause like a regular table.
 
 
+-- Basic WITH Clause Syntax
+
+-- What we explained above can be shows as an SQL code:
+
+WITH cte AS (
+    SELECT ...
+    FROM table
+)
+
+SELECT ...
+FROM cte;
 
 
