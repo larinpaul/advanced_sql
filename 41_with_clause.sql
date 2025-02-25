@@ -56,6 +56,33 @@ FROM cte;
 -- Sharding disperses data across various databases or servers,
 -- while partitioning segregates data within a single database instance into subsets.
 
+-- ...
+
+-- Example 1: Show How Each Employee's Salary Compares to the Company's Average
+
+-- To solve this problem, you need to show all data from the table employees.
+-- Also, you need to show the company's average salary and then the difference to each employee's salary.
+
+-- Here's the solution:
+
+WITH avg_total_salary AS (
+    SELECT AVG(salary) AS average_company_salary
+    FROM employees
+)
+
+SELECT id,
+    first_name,
+    last_name,
+    salary,
+    department,
+    average_company_salary,
+    salary - average_company_salary AS salary_difference
+FROM employees, avg_total_salary;
+
+-- First, initiate the CTE using the WITH clause.
+-- The CTE's name ('avg_total_salary') comes after that.
+-- Open the parentheses after AS, and write the regular SELECT statement.
+-- It calculates the company's average salary.
 
 
 
