@@ -87,3 +87,38 @@ FROM employees, avg_total_salary;
 
 -- Example 2: Show the Employees' Data Along with the Average Department and Average Company Salary
 
+-- Let's go a little further from the previous example.
+-- This time, you don't  have to calculate the difference between salaries.
+-- But you need to show all the employees' analytical data 
+-- and then show the average departmental and company salary.
+
+-- You can do that by writing two CTEs instead of one:
+
+WITH avg_total_salary AS (
+    SELECT AVG(salary) AS average_company_salary
+    FROM employees
+),
+avg_dpt_salary AS (
+    SELECT department,
+        AVG(salary) AS average_department_salary
+    FROM employees
+    GROUP BY department
+)
+
+SELECT e.id,
+       e.first_name,
+       e.last_name,
+       e.salary,
+       average_department_salary,
+       average_company_salary
+FROM employees e JOIN avg_dpt_salary ads ON e.department = ads.department,
+avg_total_salary; -- they missed the cross join statement?
+
+-- Yes, you can write multiple CTEs, one after another,
+-- and then reference them in the main query.
+
+
+
+
+
+
