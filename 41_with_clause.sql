@@ -85,4 +85,5 @@ FROM employees, avg_total_salary;
 -- It calculates the company's average salary.
 
 
+-- Example 2: Show the Employees' Data Along with the Average Department and Average Company Salary
 
