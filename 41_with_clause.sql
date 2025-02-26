@@ -117,7 +117,27 @@ avg_total_salary; -- they missed the cross join statement?
 -- Yes, you can write multiple CTEs, one after another,
 -- and then reference them in the main query.
 
+-- To correct the error from the last line...
 
+WITH avg_total_salary AS (
+    SELECT AVG(salary) AS average_company_salary
+    FROM employees
+),
+avg_dpt_salary AS (
+    SELECT department,
+           AVG(salary) AS average_department_salary
+    FROM employees
+    GROUP BY department
+)
+SELECT e.id,
+       e.first_name,
+       e.last_name,
+       e.salary,
+       ads.average_department_salary,
+       ats.average_company_salary
+FROM employees e 
+JOIN avg_dpt_salary ads ON e.department = ads.department
+CROSS JOIN avg_total_salary ats;
 
 
 
