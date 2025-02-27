@@ -146,3 +146,22 @@ CROSS JOIN avg_total_salary ats;
 -- And there's no comma between the last CTE and the main query!
 
 
+-- Examples 3 & 4: Revenue:
+
+
+-- Example 3: Show Each Year with the Corresponding Annual Revenue and Total Revenue
+
+-- This task is similar to Example 1, but we'll use a different aggregate function:
+
+WITH total_revenue AS (
+    SELECT SUM(revenue_amount) AS total_company_revenue
+    FROM revenue
+)
+
+SELECT year,
+    SUM (revenue_amount) AS annual_revenue,
+    total_company_revenue
+FROM revenue, total_revenue
+GROUP BY year, total_company_revenue
+ORDER BY year;
+
