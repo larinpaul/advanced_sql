@@ -139,6 +139,10 @@ FROM employees e
 JOIN avg_dpt_salary ads ON e.department = ads.department
 CROSS JOIN avg_total_salary ats;
 
+-- This is how you write multiple CTEs: the WITH clause is written only before the first query
+-- (it mustn't appear before any other CTE!), and a comma must separate the CTEs.
 
+-- No matter the number of CTEs, they must always be followed by the main query.
+-- And there's no comma between the last CTE and the main query!
 
 
