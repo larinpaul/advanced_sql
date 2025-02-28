@@ -162,6 +162,16 @@ SELECT year,
     SUM (revenue_amount) AS annual_revenue,
     total_company_revenue
 FROM revenue, total_revenue
-GROUP BY year, total_company_revenue
+GROUP BY year, total_company_revenue109516
 ORDER BY year;
+
+
+-- Example 4: Show Each Quarter Along with the Highest and Lowest Quarterly Revenue for That Year and Overall
+
+-- You need to list all the years and quarters with the corresponding revenue.
+-- So far, so good.
+-- Then you need to show the lowest quarterly revnue for that year and the lowest quarterly revenue for all years.
+-- Next, you do the same for the highest revenue.
+
+
 
