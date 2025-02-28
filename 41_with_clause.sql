@@ -173,5 +173,29 @@ ORDER BY year;
 -- Then you need to show the lowest quarterly revnue for that year and the lowest quarterly revenue for all years.
 -- Next, you do the same for the highest revenue.
 
+-- Here's the solution:
 
+WITH yearly_min_max_quarters AS (
+    SELECT year,
+            MIN(revenue_amount) AS minimum_quarterly_revenue_annual,
+            MAX(revenue_amount) AS maximum_quarterly_revenue_annual
+FROM revenue
+GROUP BY year),
+
+min_max_overall AS (
+    SELECT MIN(revenue_amount) AS overall_min_revenue,
+           MAX(revenue_amount) AS overall_max_revenue
+FROM revenue)
+
+SELECT r.year,
+       quarter,
+       revenue_amount,
+       minimum_quarterly_revenue_annual,
+       overall_min_revenue,
+       maximum_quarterly_revenue_annual,
+       overall_max_revenue
+FROM revenue r
+JOIN yearly_min_max_quarter ymmq
+ON r.year = ymmq.year, min_max_overall
+ORDER BY year, quarter ASC;
 
