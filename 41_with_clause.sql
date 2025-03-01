@@ -199,3 +199,30 @@ JOIN yearly_min_max_quarter ymmq
 ON r.year = ymmq.year, min_max_overall
 ORDER BY year, quarter ASC;
 
+
+-- Example 5: Show the Lowest and Highest Average Working Hours
+
+-- This example wants you to first find the average working hours by employee
+-- and then only output the lowest and the highest average.
+
+-- Here's the code to solve this problem:
+
+WITH logic_times AS (
+    SELECT
+    id,
+    employee_id,
+    start_time,
+    end_time,
+    end_time - start_time AS working_hours
+    FROM employee_timesheet),
+
+avg_login AS (
+    SELECT
+employee_id,
+AVG(working_hours) AS average_working_hours
+FROM login_times
+GROUP BY employee_id)
+
+SELECT MIN(average_working_hours) AS min_average_working_hours,
+    MAX(average_working_hours) AS max_average_working_hours
+FROM avg_login;
