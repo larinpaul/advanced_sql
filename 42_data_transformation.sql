@@ -36,6 +36,20 @@
 -- 4. Reviewing
 
 
+-- 3. How to performs a data transformation: An example using SQL
+
+-- Step 1: Create the source JSON data
+
+create database dataTransformation
+
+
+use dataTransformation
+create table sourceJSONTable (
+    [jsonID] [int] PRIMARY KEY CLUSTERED IDENTITY(1,1) NOT NULL,
+    [jsonData] nvarchar(MAX) NOT NULL.
+) ON [PRIMARY]
+
+
 
 
 
