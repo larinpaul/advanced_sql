@@ -49,6 +49,19 @@ create table sourceJSONTable (
     [jsonData] nvarchar(MAX) NOT NULL.
 ) ON [PRIMARY]
 
+-- Then, populate sourceJSONTable using the following INSERT script:
+
+insert into sourceJSONTable(jsonData)
+select '{
+                "country":"United States",
+                "states":["California", "Minessota", "Washington"],
+                "cities":[
+                        {"CA":"San Diego"},
+                        {"MN":"Minneapolis"},
+                        {"WA":"Seattle"}
+                  ]
+        }'
+
 
 
 
