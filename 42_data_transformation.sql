@@ -75,6 +75,24 @@ create table destinationTable (
 )
 
 
+-- Step 3. Discover data
+
+
+-- Step 4. Plan data transformation
+
+-- ...
+-- We need to pull out each object in the JSON and insert it into a separate column in the destination table.
+-- This is a data transformation technique called flattening
+-- since we're tranfroming the hierarchical JSON data into a non-hierarchical structure.
+-- SQL Server has a function called OPENJSON that can be used to flatten JSON.
+
+-- Requirement # -- Business Logic
+-- 1 -- Insert data from sourceJSONTable into destinationTable Select the following objects:
+-- 2 -- * Country * State * Abbreviation * City
+-- 3 -- Flatten JSON using OPENJSON functionality
+-- 4 -- De-duplicate records leaving only distinct records
+
+
 
 
 
