@@ -93,9 +93,38 @@ create table destinationTable (
 -- 4 -- De-duplicate records leaving only distinct records
 
 
+-- Step 5. Perform the data tranformation
+
+-- ...
+-- The OPENJSON function flattens each of the JSON hierarchies in our source data
+
+insert into destinationTable(country, [state], abbreviation, city)
+select country,
+t.value as [state],
+c[key] as abbreviation,
+c.value as city
+from sourceJSONTable st
+cross apply OPENJSON(st.jsonData)
+with (country varchar(20), states nvarchar(max) as JSON, cities nvarchar(max) as JSON) s
+cross apply OPENJSON(s.sates) t
+cross apply OPENJSON(s.cities) a
+cross apply openJSON(a.value) c
+where (t.value = 'Minessota' and c.[key] = 'MN')
+or (t.value = 'California' and c.[key] = 'CA')
+or (t.value = 'Washington' and c.[key] = 'WA')
+
+-- ...
+
+-- 6. Review the data transformation
 
 
+-- Benefits of data transformation
+-- Improved data quality
+-- Better data accessibility
+-- Simpler data governance
 
 
-
-
+-- 5. Challenges of data transformation
+-- Compute-resource intensive
+-- Exprensive (a lot of storage)
+-- Requires domain knowledge
