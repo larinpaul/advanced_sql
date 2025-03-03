@@ -63,6 +63,17 @@ select '{
         }'
 
 
+-- Step 2. Create the destination table
+
+use dataTransformation
+create table destinationTable (
+    [tableID] [int] PRIMARY KEY CLUSTERED IDENTITY(1,1) NOT NULL,
+    [country] nvarchar(50),
+    [state] nvarchar(50),
+    [abbreviation]varchar(3),
+    [city] nvarchar(50)
+)
+
 
 
 
