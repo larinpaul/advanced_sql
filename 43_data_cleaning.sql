@@ -51,5 +51,5 @@
 -- We're going to remove those, too:
 
 
-
+-- You can use filter to clear or select all...
 
