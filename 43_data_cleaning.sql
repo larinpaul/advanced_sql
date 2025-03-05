@@ -53,3 +53,11 @@
 
 -- You can use filter to clear or select all...
 -- Then you can remove filter
+
+
+-- Task 2: Identify and remove missing data points
+
+-- This is a gentle introduction, after all! 
+-- If you're curious, you can learn about alternative methods for handling missing data here -- https://medium.com/@danberdov/dealing-with-missing-data-8b71cd819501
+
+-- and in this method we also usedfilter...
