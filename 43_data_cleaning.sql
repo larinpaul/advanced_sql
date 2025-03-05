@@ -52,4 +52,4 @@
 
 
 -- You can use filter to clear or select all...
-
+-- Then you can remove filter
