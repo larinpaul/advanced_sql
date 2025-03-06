@@ -20,4 +20,35 @@
 -- complying with data privacy regulations becomes far more straightforward.
 
 
+-- 2. Inconsistent Data
+
+-- Inconsistent or non-standardized data looks different, but represents the same thing.
+
+
+-- 3. Too Much Data
+
+-- Yes, data hoarding is a thing
+
+
+-- 4. Duplicate Data
+
+-- e.g. a single employee showing up twice under different companies, or with different job titles.
+
+-- How do duplicates happen? Generally, you'll muddy your data with copies during data migrations and manual inputs
+
+-- Before the age of mass data accumulation, manpower alone was enough to merge duplicates
+-- and link leads to accounts.
+-- Nowadays, there are automated solutions for detecting and merging duplicates.
+
+
+-- 5. Incomplete Data
+
+-- Without attributes like industry type, job title, or last name, you risk excluding valuable leads 
+-- in your campaigns.
+
+
+-- 6. Inaccurate Data
+
+
+
 
