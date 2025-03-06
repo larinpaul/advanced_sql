@@ -49,6 +49,31 @@
 
 -- 6. Inaccurate Data
 
+-- If your data is plain wrong, you run into all sorts of problems -
+-- from missteps on cold calls to inaccurate reporting and decision-making.
+
+-- It's far cheaper to verify and cleanse data regularly than to do nothing at all.
+
+
+-- What are the Consequences of Dirty Data?
+
+-- 1. Ineffective Marketing Campaigns
+
+-- 2. Poor Customer Experience
+
+-- 3. Damaged Brand Reputation
+
+-- 4. Misinformed Decision-Making
+
+-- 5. Misaligned Sales and Marketing Teams
+
+-- 6. Decreased ROI from Sales and Marketing Technologies
+
+-- 7. A Slower Sales Cycle
+
+
+
+
 
 
 
