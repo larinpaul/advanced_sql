@@ -72,6 +72,16 @@
 -- 7. A Slower Sales Cycle
 
 
+-- How do You Prevent Dirty Data from Entering Your CRM?
+
+-- Begin with regular CRM health assessments.
+-- You can do this manually or partner with your data provider. -- https://pipeline.zoominfo.com/operations/b2b-data-provider
+-- * Use a good mix of data sources - first-part and third-pary, including intent data. -- https://pipeline.zoominfo.com/sales/what-is-intent-data-and-how-to-use-it
+-- * Cleanse your data regularly and fill in any gaps by encriching each field with the most reliable source possible
+-- * Practiceongoing data management.
+
+-- The key is to identity the types of bad data in your CRMP, clear them out, and replenish them
+-- with a stream of high-queality, actionable data.
 
 
 
