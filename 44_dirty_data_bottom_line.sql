@@ -82,8 +82,3 @@
 
 -- The key is to identity the types of bad data in your CRMP, clear them out, and replenish them
 -- with a stream of high-queality, actionable data.
-
-
-
-
-
